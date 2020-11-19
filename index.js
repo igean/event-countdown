@@ -13,4 +13,4 @@ app.get('/', (request, response) => {
     response.render('countdown-events.hbs')
 })
 
-app.listen(2020)
+app.listen(process.env.PORT)
