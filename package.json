@@ -1,0 +1,23 @@
+{
+  "name": "event-countdown",
+  "version": "1.0.0",
+  "description": "Countdown events and get notified so you don't forget it",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js"
+  },
+  "keywords": [
+    "countdown",
+    "events",
+    "clock",
+    "timer"
+  ],
+  "author": "Gean Araujo",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "hbs": "^4.1.1",
+    "nodemon": "^2.0.6"
+  }
+}
