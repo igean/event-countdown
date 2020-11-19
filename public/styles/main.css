@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Righteous&family=Roboto+Mono:wght@400;700&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -14,7 +16,9 @@ body {
 
 .menu {
     position: absolute;
+    z-index: 2;
     transition: .1s;
+    top: 0;
 }
 
 .menu.event-list {
@@ -29,18 +33,26 @@ body {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
-.datetime {
-    text-align: right;
-}
-
 .event-item p {
     margin-top: .5rem;
+    font-family: 'Roboto Mono', monospace;
 }
 
 .event-item-head {
     display: flex;
     align-items: center;
     justify-content: space-between;
+}
+
+.datetime {
+    text-align: right;
+    font-family: 'Roboto Mono', monospace;
+    font-weight: 700 !important;
+}
+
+h4 {
+    font-family: 'Righteous', cursive;
+    font-size: 2rem;
 }
 
 .countdown-time {
@@ -58,4 +70,47 @@ body {
 
 .countdown-time strong {
     margin: 2rem 0 .8rem;
+}
+
+.countdown-time strong, .countdown-time p {
+    font-family: 'Roboto Mono', monospace;
+}
+
+.bar {
+    width: 1rem;
+    height: 5px;
+    background-color: red;
+    margin: .5rem;
+    border-radius: 2px;
+}
+
+.bar~.bar {
+    width: 2rem;
+}
+
+.bars {
+    position: fixed;
+    z-index: 1;
+    top: 1.5rem;
+    left: 1rem;
+}
+
+@media (min-width: 768px) {
+    .container {
+        display: flex;
+    }
+
+    .menu {
+        width: clamp(20rem, 40%, 30rem);
+        position: static;
+    }
+
+    .countdown-time {
+        margin: auto;
+    }
+
+    .countdown-time img {
+        margin: 0;
+        width: 20rem;
+    }
 }
