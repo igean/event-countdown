@@ -17,25 +17,55 @@ if (window.matchMedia('(max-width:500px)').matches) {
 }
 
 
+// COUNTDOWN
 
-const countdown = document.querySelector('.countdown-time p')
-var target_date = new Date('2020-12-23 14:30:00')
-var days, hours, min, sec
+// activate clicked card so it get the date and hour
+function test (e) {
+    const card_active = document.querySelectorAll('.card-active')
 
-setInterval(() => {
+    for (card of card_active) {
+        card.classList.remove('card-active')
+    }
+    e.classList.add('card-active')
 
-    var current_date = new Date()
-    var sec_counter = (target_date - current_date)/1000
 
-    days = parseInt(sec_counter/86400)
-    sec_counter = sec_counter%86400
+    const d = document.querySelector('.card-active .d').innerText
+    const m = document.querySelector('.card-active .m').innerText
+    const y = document.querySelector('.card-active .y').innerText
+    const h = document.querySelector('.card-active p~p').innerText
 
-    hours = parseInt(sec_counter/3600)
-    sec_counter = sec_counter%3600
+    countdown(d,m,y,h)
+}
 
-    min = parseInt(sec_counter/60)
-    sec = parseInt(sec_counter%60)
 
-    countdown.innerText = days+'d:'+hours+'h:'+min+'m:'+sec+'s'
+// COUNTDOWN FUNCTION
+function countdown(d,m,y,h) {
+    const countdown = document.querySelector('.countdown-time p')
+    var target_date = new Date(`${y}-${m}-${d} ${h}:00`)
+    var days, hours, min, sec
 
-}, 1000)
+    setInterval(() => {
+
+        var current_date = new Date()
+        var sec_counter = (target_date - current_date)/1000
+
+        days = parseInt(sec_counter/86400)
+        sec_counter = sec_counter%86400
+
+        hours = parseInt(sec_counter/3600)
+        sec_counter = sec_counter%3600
+
+        min = parseInt(sec_counter/60)
+        sec = parseInt(sec_counter%60)
+
+
+        if (days == 0 & hours == 0 & min < 1 & sec < 1) {
+            countdown.innerText = "O evento começa agora"
+        }else if (hours < 0 | min < 0) {
+            countdown.innerText = "O evento já passou"
+        }else {
+            countdown.innerText = days+'d:'+hours+'h:'+min+'m:'+sec+'s'
+        }
+
+    }, 1000)
+}
