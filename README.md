@@ -1,5 +1,5 @@
 # Event Countdown
-Acho que posso dizer que este é meu primeiro projeto 100% meu. É algo que veio de mim e somente de mim. Sei que já existe apps com esta função, mas o que quero dizer é não fiz esse projeto seguindo tutoriais, por exemplo.
+Acho que posso dizer que este é meu primeiro projeto 100% meu. É algo que veio de mim e somente de mim. Sei que já existe apps com esta função, mas o que quero dizer é que não fiz esse projeto seguindo tutoriais, por exemplo.
 
 O site é basicamente um Countdown, uma contagem regressiva de eventos. Você adiciona um evento, o dia e o horário do mesmo e o site te fornecerá uma contagem regressiva do mesmo. É uma ideia simples, mas que tem me agregado bastante conhecimento durante o desenvolvimento da mesma.
 
