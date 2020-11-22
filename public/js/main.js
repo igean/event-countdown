@@ -3,15 +3,21 @@ const menu = document.querySelector('.menu')
 const bars = document.querySelector('.bars')
 
 
-if (window.matchMedia('(max-width:500px)').matches) {
+if (window.matchMedia('(max-width:700px)').matches) {
+
+    window.addEventListener('load', () => {
+        menu.style.transform = "translateX(-100%)"
+    })
 
     card.addEventListener('click', () => {
         menu.style.transform = "translateX(-100%)"
+        bars.style.display = "block"
     })
         
     bars.addEventListener('click', () => {
         if (menu.style.transform == "translateX(-100%)") {
             menu.style.transform = "translateX(0)"
+            bars.style.display = "none"
         }
     })
 }
