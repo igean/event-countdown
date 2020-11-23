@@ -2,10 +2,29 @@ const darkmode = document.querySelector('#dark-switch')
 
 darkmode.addEventListener('click', () => {
 
-    document.querySelector('.container').classList.toggle('dark-mode')
+    const container = document.querySelector('.container')
+    container .classList.toggle('dark-mode')
+
     document.querySelector('.container main h2').classList.toggle('dark-mode')
 
     for (p of document.querySelectorAll('p')) {
         p.classList.toggle('dark-mode')
     }
+
+    if (container.classList.toString().includes('dark-mode')) {
+        window.localStorage.setItem('darkmode', 'dark-mode')
+    }else {
+        window.localStorage.removeItem('darkmode')
+    }
 })
+
+
+// localStorage onload
+if (window.localStorage.getItem('darkmode')) {
+    document.querySelector('.container').classList.add('dark-mode')
+    document.querySelector('.container main h2').classList.add('dark-mode')
+    for (p of document.querySelectorAll('p')) {
+        p.classList.add('dark-mode')
+    }
+
+}
