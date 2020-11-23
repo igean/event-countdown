@@ -74,34 +74,18 @@ html, body {
     color: #6159E5;
 }
 
-.dark-mode {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
 
-    background: #CCC;
-    border-radius: 10px;
+/* DARK MODE */
+.container.dark-mode {
+    background-color: #000;
 
-    width: 2rem;
-    height: 1rem;
-
-    position: relative;
+    color: #F0F0F0;
 }
 
-.dark-mode-switch {
-    position: absolute;
-    transform: translateX(-50%);
-    width: 1.2rem;
-    height: 1.2rem;
-    border-radius: 50%;
-    background: #49485a;
+.container main h2.dark-mode {
+    color: #FFF;
 }
 
-.dark-mode img {
-    width: 1.2rem;
-    height: 1.2rem;
-}
-
-.dark-mode img[alt='moon'] {
-    opacity: 0;
+.container main p.dark-mode, .container footer p.dark-mode {
+    color: #E1E1E1;
 }
