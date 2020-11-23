@@ -9,7 +9,7 @@ html, body {
 .container {
     height: 100vh;
     background: #F0F0F0 50% 15%/clamp(27rem,100%,35rem) url('../images/back.svg') no-repeat;
-    padding: 1rem .8rem;
+    padding: .8rem .8rem;
 }
 
 .container header {
@@ -44,4 +44,5 @@ html, body {
 
 .container footer {
     margin-top: 3rem;
+    text-align: center;
 }
