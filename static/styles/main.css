@@ -25,7 +25,7 @@ html, body {
 }
 
 .container header h1 {
-    font-size: 1rem;
+    font-size: 1.2rem;
 }
 
 .container main {
@@ -72,4 +72,36 @@ html, body {
 .container footer p a {
     text-decoration: none;
     color: #6159E5;
+}
+
+.dark-mode {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    background: #CCC;
+    border-radius: 10px;
+
+    width: 2rem;
+    height: 1rem;
+
+    position: relative;
+}
+
+.dark-mode-switch {
+    position: absolute;
+    transform: translateX(-50%);
+    width: 1.2rem;
+    height: 1.2rem;
+    border-radius: 50%;
+    background: #49485a;
+}
+
+.dark-mode img {
+    width: 1.2rem;
+    height: 1.2rem;
+}
+
+.dark-mode img[alt='moon'] {
+    opacity: 0;
 }
