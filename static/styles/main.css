@@ -14,7 +14,7 @@ html, body {
 
 .container {
     min-height: 100%;
-    background: #F0F0F0 50% 15%/clamp(27rem,100%,35rem) url('../images/back.svg') no-repeat;
+    background: #F0F0F0 50% 10%/clamp(27rem,100%,35rem) url('../images/back.svg') no-repeat;
     padding: 1rem .8rem 3rem;
 }
 
@@ -26,6 +26,11 @@ html, body {
 
 .container header h1 {
     font-size: 1.2rem;
+}
+
+.container header a img {
+    width: 30px;
+    height: 30px;
 }
 
 .container main {

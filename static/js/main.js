@@ -11,9 +11,14 @@ darkmode.addEventListener('click', () => {
         p.classList.toggle('dark-mode')
     }
 
+
     if (container.classList.toString().includes('dark-mode')) {
+        darkmode.firstChild.src = 'images/sun.svg'
+
         window.localStorage.setItem('darkmode', 'dark-mode')
     }else {
+        darkmode.firstChild.src = 'images/moon.svg'
+
         window.localStorage.removeItem('darkmode')
     }
 })
@@ -26,5 +31,5 @@ if (window.localStorage.getItem('darkmode')) {
     for (p of document.querySelectorAll('p')) {
         p.classList.add('dark-mode')
     }
-
+    darkmode.firstChild.src = 'images/sun.svg'
 }
