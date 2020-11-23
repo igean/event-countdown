@@ -1,3 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Reem+Kufi&display=swap');
+
+* {
+    font-family: 'Reem Kufi', sans-serif;
+}
+
 html, body {
     height: 100vh;
     width: 100vw;
@@ -7,7 +13,7 @@ html, body {
 }
 
 .container {
-    height: 100vh;
+    min-height: 100%;
     background: #F0F0F0 50% 15%/clamp(27rem,100%,35rem) url('../images/back.svg') no-repeat;
     padding: 1rem .8rem 3rem;
 }
@@ -27,20 +33,36 @@ html, body {
     text-align: center;
 }
 
+.container main h2 {
+    color: #5047EA;
+    font-size: 2.5rem;
+}
+
+.container main p, .container footer p {
+    color: #525252;
+    font-size: 1.2rem;
+    line-height: 1;
+}
+
 .login {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.login button {
+.login a {
     background: #6159E5;
     color: #FFFFFF;
+    font-size: 1.5rem;
     border: none;
-    height: 2rem;
-    width: 80%;
-    border-radius: .2rem;
+    width: 70%;
+    padding: .4rem 0 .2rem;
     margin: .2rem 0;
+    border-radius: .2rem;
+}
+
+.login span {
+    font-size: 1.2rem;
 }
 
 .container footer {
@@ -49,4 +71,5 @@ html, body {
 
 .container footer p a {
     text-decoration: none;
+    color: #6159E5;
 }
