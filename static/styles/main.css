@@ -1,0 +1,47 @@
+html, body {
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    height: 100vh;
+    background: #F0F0F0 50% 15%/clamp(27rem,100%,35rem) url('../images/back.svg') no-repeat;
+    padding: 1rem .8rem;
+}
+
+.container header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.container header h1 {
+    font-size: 1rem;
+}
+
+.container main {
+    margin-top: 20rem;
+    text-align: center;
+}
+
+.login {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.login button {
+    background: #6159E5;
+    color: #FFFFFF;
+    border: none;
+    height: 2rem;
+    width: 10rem;
+    border-radius: .2rem;
+}
+
+.container footer {
+    margin-top: 3rem;
+}
