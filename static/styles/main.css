@@ -6,7 +6,6 @@
 
 html, body {
     height: 100vh;
-    width: 100vw;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -93,4 +92,65 @@ html, body {
 
 .container main p.dark-mode, .container footer p.dark-mode {
     color: #E1E1E1;
+}
+
+
+/* MEDIA QUERIES */
+@media (min-width:1024px) {
+
+    .container {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 10% 70% 10%;
+        background: #F0F0F0 10% 50%/clamp(30rem,100%,35rem) url('../images/back.svg') no-repeat;
+        padding: 0 5%;
+    }
+
+    .container header {
+        grid-column: 1/3;
+        margin-top: 2rem;
+    }
+
+    .container header h1 {
+        font-size: 2rem;
+    }
+
+    .container header a img {
+        width: 3rem;
+        height: 3rem;
+    }
+
+    .container main {
+        grid-column: 2/3;
+        grid-row: 2/3;
+        margin-top: 1rem;
+    }
+
+    .container main h2 {
+        font-size: 3.2rem;
+        line-height: 1;
+    }
+
+    .container main .login {
+        margin: 5rem 0;
+    }
+
+    .container main .login a {
+        width: 80%;
+        margin: 1rem 0;
+    }
+
+    .container main .login span {
+        font-size: 1.8rem;
+    }
+
+    .container main p, .container footer p {
+        font-size: 1.8rem;
+        line-height: 0;
+    }
+
+    .container footer {
+        grid-column: 2/3;
+    }
+
 }
