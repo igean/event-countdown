@@ -1,0 +1,14 @@
+.container header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.container header h1 {
+    font-size: 1.2rem;
+}
+
+.container header a img {
+    width: 30px;
+    height: 30px;
+}

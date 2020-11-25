@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Reem+Kufi&display=swap');
+
+* {
+    font-family: 'Reem Kufi', sans-serif;
+}
+
+html, body {
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    min-height: 100%;
+    padding: 1rem .8rem 3rem;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form .input {
+    position: relative;
+    width: 80%;
+    height: 3rem;
+    border-radius: 1rem;
+    background: rgba(0, 0, 0, .2);
+
+    display: grid;
+    grid-template-columns: 5% 90% 5%;
+    grid-template-rows: 100%;
+
+    align-items: center;
+
+    margin-bottom: 1rem;
+    padding-top: 10px;
+}
+
+form .input label {
+    position: absolute;
+    left: 1rem;
+    transition: .2s ease-in-out;
+}
+
+form .input input {
+    border: none;
+    outline: none;
+    grid-column: 2/3;
+    grid-row: 1/2;
+    background: none;
+
+    font-size: large;
+}
