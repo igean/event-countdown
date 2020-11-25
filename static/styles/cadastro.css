@@ -22,6 +22,10 @@ form {
     align-items: center;
 }
 
+form h2 {
+    font-size: 3rem;
+}
+
 form .input {
     position: relative;
     width: 80%;
@@ -43,6 +47,9 @@ form .input label {
     position: absolute;
     left: 1rem;
     transition: .2s ease-in-out;
+
+    font-size: 1.4rem;
+    font-weight: 400;
 }
 
 form .input input {
@@ -53,4 +60,44 @@ form .input input {
     background: none;
 
     font-size: large;
+}
+
+form button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 70%;
+    background: none;
+    border: none;
+}
+
+main {
+    text-align: center;
+}
+
+main p {
+    font-size: 1.8rem;
+    line-height: 1;
+}
+
+main a {
+    background: #6159E5;
+    color: #FFFFFF;
+    font-size: 1.5rem;
+    border: none;
+    width: 70%;
+    padding: .4rem 25% .3rem;
+    border-radius: .2rem;
+
+    transition: .3s;
+}
+
+main form a {
+    width: 100%;
+}
+
+main a:hover {
+    background: #433E99;
+    cursor: pointer;
 }
