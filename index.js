@@ -13,4 +13,8 @@ app
     return res.render('index')
 })
 
+.get('/cadastro', (req, res) => {
+    return res.render('cadastro')
+})
+
 .listen(process.env.PORT)
