@@ -31,7 +31,7 @@ form .input {
     width: 80%;
     height: 3rem;
     border-radius: 1rem;
-    background: rgba(0, 0, 0, .2);
+    background: rgba(204, 204, 204, .3);
 
     display: grid;
     grid-template-columns: 5% 90% 5%;
