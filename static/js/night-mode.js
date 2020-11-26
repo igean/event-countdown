@@ -1,35 +1,34 @@
-const darkmode = document.querySelector('#dark-switch')
+if (window.localStorage.getItem('darkmode')) {
+    darkmode()
+}
 
-darkmode.addEventListener('click', () => {
+const nswitch = document.querySelector('#dark-switch')
 
-    const container = document.querySelector('.container')
-    container .classList.toggle('dark-mode')
-
-    document.querySelector('.container main h2').classList.toggle('dark-mode')
-
-    for (p of document.querySelectorAll('p')) {
-        p.classList.toggle('dark-mode')
-    }
-
-
-    if (container.classList.toString().includes('dark-mode')) {
-        darkmode.firstChild.src = 'images/sun.svg'
-
-        window.localStorage.setItem('darkmode', 'dark-mode')
-    }else {
-        darkmode.firstChild.src = 'images/moon.svg'
-
-        window.localStorage.removeItem('darkmode')
-    }
+nswitch.addEventListener('click', () => {
+    darkmode()
 })
 
 
-// localStorage onload
-if (window.localStorage.getItem('darkmode')) {
-    document.querySelector('.container').classList.add('dark-mode')
-    document.querySelector('.container main h2').classList.add('dark-mode')
-    for (p of document.querySelectorAll('p')) {
-        p.classList.add('dark-mode')
+function darkmode() {
+    [
+        document.querySelector('.container'),
+        document.querySelector('h1'),
+        document.querySelector('h2')
+    ]
+
+        .forEach(e => {
+         e.classList.toggle('dark-mode')
+    })
+
+    document.querySelectorAll('p').forEach(e => {
+        e.classList.toggle('dark-mode')
+    })
+
+    if (document.querySelector('.container').classList.toString().includes('dark-mode')) {
+        nswitch.children[0].src = 'images/sun.svg'
+        window.localStorage.setItem('darkmode', '')
+    } else {
+        nswitch.children[0].src = 'images/moon.svg'
+        window.localStorage.removeItem('darkmode')
     }
-    darkmode.firstChild.src = 'images/sun.svg'
 }
