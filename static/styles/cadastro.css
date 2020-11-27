@@ -2,13 +2,13 @@
 
 * {
     font-family: 'Reem Kufi', sans-serif;
+    box-sizing: border-box;
 }
 
 html, body {
-    height: 100vh;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    height: 100vh;
 }
 
 .container {
@@ -100,4 +100,23 @@ main form a {
 main a:hover {
     background: #433E99;
     cursor: pointer;
+}
+
+
+/* MEDIA QUERIES */
+@media (min-width: 1024px) {
+    .container {
+        display: grid;
+        grid-template-columns: repeat(5,25%);
+        grid-template-rows: 10% 70% 10%;
+        padding: 0 5%;
+    }
+
+    .container header {
+        grid-column: 1/5;
+    }
+
+    .container main {
+        grid-column: 2/4;
+    }
 }
