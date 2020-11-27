@@ -25,6 +25,10 @@ function darkmode() {
         e.classList.toggle('dark-mode')
     })
 
+    document.querySelectorAll('input').forEach(e => {
+        e.classList.toggle('dark')
+    })
+
     if (document.querySelector('.container').classList.toString().includes('dark-mode')) {
         nswitch.children[0].src = 'images/sun.svg'
         window.localStorage.setItem('darkmode', 'dark')

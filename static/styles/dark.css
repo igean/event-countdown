@@ -12,3 +12,7 @@
 .container main p.dark-mode, .container footer p.dark-mode {
     color: #E1E1E1;
 }
+
+input.dark {
+    color: #F0F0F0;
+}
