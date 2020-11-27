@@ -74,22 +74,6 @@ a {
 }
 
 
-/* DARK MODE */
-.container.dark-mode {
-    background-color: #000;
-
-    color: #F0F0F0;
-}
-
-.container main h2.dark-mode {
-    color: #FFF;
-}
-
-.container main p.dark-mode, .container footer p.dark-mode {
-    color: #E1E1E1;
-}
-
-
 /* MEDIA QUERIES */
 @media (min-width:1024px) {
 
@@ -127,7 +111,7 @@ a {
     }
 
     .container main .login {
-        margin: 5rem 0;
+        margin: 4rem 0;
     }
 
     .container main .login a {
