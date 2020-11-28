@@ -9,11 +9,16 @@ const pool = new Pool({
 
 pool.connect().then(pool => {
     pool.query(`
-    CREATE TABLE users (
-        id SERIAL PRIMARY KEY,
-        name VARCHAR(100),
-        email VARCHAR(200),
-        password VARCHAR(200)
+    NSERTO INTO users (name, email, password)
+    VALUES (
+        "Gean Araujo",
+        "coder.gean@gmail.com"
     );
-`)
+`).then(pool =>  {
+    pool.query(`
+        SELECT * FROM users;
+    `).then(pool => {
+        console.log(pool)
+    })
+})
 })
