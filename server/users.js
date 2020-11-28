@@ -7,17 +7,22 @@ const pool = new Pool({
     }
 })
 
-const name = 'Gean Araujo'
-const pass = 'passwordd'
-
-pool.connect().then(
-    pool => {
-        if (pool.query(`
-            SELECT * FROM users WHERE name='${name}' AND password='${pass}'
-        `)) {
-            console.log('Conectado com sucesso')
-        } else {
-            console.log('Nome ou senha incorreta')
+const register = (req, res) => {
+    pool.connect().then(
+        pool => {
+            pool.query(`
+                INSERT INTO users (name, email, password) VALUES (
+                    '${req.name}',
+                    '${req.email}',
+                    '${req.password}'
+                )
+            `)
         }
-    }
-)
+    ).then(
+        res.render('registrado')
+    ).catch(error => {
+        console.log(error)
+    })
+}
+
+module.exports = register
