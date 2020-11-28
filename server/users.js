@@ -12,7 +12,8 @@ pool.connect().then(pool => {
     INSERTO INTO users (name, email, password)
     VALUES (
         "Gean Araujo",
-        "coder.gean@gmail.com"
+        "coder.gean@gmail.com",
+        "password"
     );
 `).then(pool =>  {
     pool.query(`
