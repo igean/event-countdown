@@ -15,11 +15,10 @@ pool.connect().then(pool => {
         'coder.gean@gmail.com',
         'password'
     );
-`).then(pool =>  {
+`).then(
     pool.query(`
-        SELECT * FROM users;
-    `).then(pool => {
-        console.log(pool)
-    })
-})
+            SELECT * FROM users;
+        `).then(res => {console.log(res)})
+)
+
 })
