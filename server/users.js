@@ -9,7 +9,7 @@ const pool = new Pool({
 
 pool.connect().then(pool => {
     pool.query(`
-    INSERTO INTO users (name, email, password)
+    INSERT INTO users (name, email, password)
     VALUES (
         "Gean Araujo",
         "coder.gean@gmail.com",
