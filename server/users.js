@@ -8,7 +8,7 @@ const pool = new Pool({
 })
 
 const name = 'Gean Araujo'
-const pass = 'password'
+const pass = 'passwordd'
 
 pool.connect().then(
     pool => {
