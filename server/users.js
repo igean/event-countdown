@@ -15,5 +15,5 @@ pool.query(`
         name VARCHAR(100),
         email VARCHAR(200),
         password VARCHAR(200),
-    )
+    );
 `)
