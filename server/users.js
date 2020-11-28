@@ -7,18 +7,8 @@ const pool = new Pool({
     }
 })
 
-pool.connect().then(pool => {
+pool.connect().then(
     pool.query(`
-    INSERT INTO users (name, email, password)
-    VALUES (
-        'Gean Araujo',
-        'coder.gean@gmail.com',
-        'password'
-    );
-`).then(
-    pool.query(`
-            SELECT * FROM users;
-        `).then(res => {console.log(res)})
+            SELECT * FROM users WHERE  name='Gean Araujo' AND password='password';
+        `).then(res => {console.log(res.rows)})
 )
-
-})
