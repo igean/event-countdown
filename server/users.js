@@ -11,7 +11,7 @@ pool.connect()
 
 pool.query(`
     CREATE TABLE users (
-        id NUMBER SERIAL PRIMARY KEY,
+        id SERIAL PRIMARY KEY,
         name VARCHAR(100),
         email VARCHAR(200),
         password VARCHAR(200),
