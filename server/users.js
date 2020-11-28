@@ -7,9 +7,8 @@ const pool = new Pool({
     }
 })
 
-pool.connect()
-
-pool.query(`
+pool.connect().then(pool => {
+    pool.query(`
     CREATE TABLE users (
         id SERIAL PRIMARY KEY,
         name VARCHAR(100),
@@ -17,3 +16,4 @@ pool.query(`
         password VARCHAR(200)
     );
 `)
+})
