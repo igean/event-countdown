@@ -14,6 +14,6 @@ pool.query(`
         id SERIAL PRIMARY KEY,
         name VARCHAR(100),
         email VARCHAR(200),
-        password VARCHAR(200),
+        password VARCHAR(200)
     );
 `)
