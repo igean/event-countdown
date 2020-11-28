@@ -3,6 +3,8 @@ const path = require('path')
 
 const app = express()
 
+const register = require('./server/users')
+
 app
 .set('view engine', 'hbs')
 .set('views', path.join(__dirname, 'views'))
@@ -16,5 +18,7 @@ app
 .get('/cadastro', (req, res) => {
     return res.render('cadastro')
 })
+
+.post('/cadastro', register)
 
 .listen(process.env.PORT)
