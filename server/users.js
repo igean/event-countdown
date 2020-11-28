@@ -13,7 +13,7 @@ const pass = 'password'
 pool.connect().then(
     pool => {
         if (pool.query(`
-            SELECT * FROM users WHERE name=${name} AND password=${pass}
+            SELECT * FROM users WHERE name='${name}' AND password='${pass}'
         `)) {
             console.log('Conectado com sucesso')
         } else {
