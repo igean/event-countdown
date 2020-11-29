@@ -12,9 +12,9 @@ const register = (req, res) => {
         pool => {
             pool.query(`
                 INSERT INTO users (name, email, password) VALUES (
-                    '${req.name}',
-                    '${req.email}',
-                    '${req.password}'
+                    '${req.body.name}',
+                    '${req.body.email}',
+                    '${req.body.password}'
                 )
             `)
         }
