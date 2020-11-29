@@ -15,11 +15,11 @@ pool.connect().then(
                 UPDATE users
                 SET password = '${hash}'
                 WHERE id = 5;
-            `)
+            `).then(
+                pool.query(`
+                    SELECT * FROM users;
+                `).then(pool => {console.log(pool.rows)})
+            )
         }
-    }).then(
-        pool.query(`
-            SELECT * FROM users;
-        `).then(pool => {console.log(pool.rows)})
-    )
+    })
 )
