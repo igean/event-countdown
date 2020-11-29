@@ -1,5 +1,7 @@
 const express = require('express');
 const path = require('path')
+const bodyParser = require('body-parser')
+const urlParser = bodyParser.urlencoded({extended: false})
 
 const app = express()
 
@@ -17,6 +19,8 @@ app
 
 .get('/cadastro', (req, res) => {
     return res.render('cadastro')
-});
+})
+
+.post('/cadastro', urlParser, register)
 
 app.listen(process.env.PORT)
