@@ -14,7 +14,7 @@ const register = (req, res) => {
                 INSERT INTO users (name, email, password) VALUES (
                     '${req.body.name}',
                     '${req.body.email}',
-                    '${req.body.password}'
+                    '${req.body.pass}'
                 )
             `)
         }

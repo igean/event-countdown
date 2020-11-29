@@ -11,6 +11,6 @@ pool.connect().then(pool => {
     pool.query(`
         SELECT * FROM users;
     `).then (
-        pool => {console.log(pool)}
+        pool => {console.log(pool.rows)}
     )
 })
