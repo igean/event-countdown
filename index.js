@@ -2,7 +2,6 @@ const express = require('express');
 const path = require('path')
 
 const app = express()
-const router = express.Router()
 
 const register = require('./server/users')
 
@@ -19,7 +18,5 @@ app
 .get('/cadastro', (req, res) => {
     return res.render('cadastro')
 });
-
-router.post('/cadastro', register)(app);
 
 app.listen(process.env.PORT)
