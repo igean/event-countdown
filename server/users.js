@@ -25,4 +25,4 @@ const register = (req, res) => {
     })
 }
 
-module.exports = register
+module.exports = app => app.use('/', register)

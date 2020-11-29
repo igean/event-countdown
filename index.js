@@ -20,6 +20,6 @@ app
     return res.render('cadastro')
 })
 
-router.post('/cadastro', register)
+router.post('/cadastro', register)(app)
 
 app.listen(process.env.PORT)
