@@ -8,14 +8,18 @@ const pool = new Pool({
     }
 })
 
-pool.connect().then(pool => {
-    pool.query(`
-        SELECT password FROM users WHERE id = 3;
-    `).then(pass => {
-        pool.query(`UPDATE users SET password='${bcrypt.hash(pass,10)}'`)
+pool.connect().then(
+    bcrypt.hash('23012020', 10, (err, hash) => {
+        pool => {
+            pool.query(`
+                UPDATE users
+                SET password = '${hash}'
+                WHERE id = 5;
+            `)
+        }
     }).then(
         pool.query(`
             SELECT * FROM users;
-        `).then(pool => {console.log(pool)})
+        `).then(pool => {console.log(pool.rows)})
     )
-})
+)

@@ -1,4 +1,6 @@
+const { hash } = require('bcrypt')
 const {Pool} = require('pg')
+bcrypt = require('bcrypt')
 
 const pool = new Pool({
     connectionString: process.env.DATABASE_URL,
@@ -8,20 +10,22 @@ const pool = new Pool({
 })
 
 const register = (req, res) => {
-    pool.connect().then(
-        pool => {
-            pool.query(`
-                INSERT INTO users (name, email, password) VALUES (
+    bcrypt.hash(req.body.pass, 10, (err, hash) => {
+
+        req.body.pass = hash
+
+        pool.connect().then(async pool => {
+            
+                pool.query(`
+                INSERT INTO users (name, email, password)   VALUES (
                     '${req.body.name}',
                     '${req.body.email}',
                     '${req.body.pass}'
                 )
             `)
-        }
-    ).then(
-        res.render('registrado')
-    ).catch(error => {
-        console.log(error)
+
+            return res.render('registrado')
+        })
     })
 }
 
