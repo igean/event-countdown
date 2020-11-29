@@ -18,8 +18,8 @@ app
 
 .get('/cadastro', (req, res) => {
     return res.render('cadastro')
-})
+});
 
-router.post('/cadastro', register)(app)
+router.post('/cadastro', register)(app);
 
 app.listen(process.env.PORT)
