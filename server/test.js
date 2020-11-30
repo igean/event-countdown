@@ -9,5 +9,5 @@ const pool = new Pool({
 })
 
 pool.connect().then(
-    pool.query(`SELECT email, password FROM users WHERE email='crislanemiranda@gmail.com`).then(results => {console.log(results.rows)})
+    pool.query(`SELECT email, password FROM users WHERE email='crislanemiranda@gmail.com'`).then(results => {console.log(results.rows)})
 )
