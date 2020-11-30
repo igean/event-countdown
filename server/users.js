@@ -11,6 +11,14 @@ const pool = new Pool({
 pool.connect()
 
 const register = (req, res) => {
+    pool.query(`SELECT * WHERE email='${req.body.email}'`).then(
+        results => {
+            if (results.rows > 0) {
+                return res.send('Este email já está cadatrado')
+            }
+        }
+    )
+
     bcrypt.hash(req.body.pass, 10, (err, hash) => {
 
     if (err) {
