@@ -9,8 +9,10 @@ const pool = new Pool({
 })
 
 pool.connect().then(
-    pool.query(`SELECT email, password FROM users WHERE email='crislanemiranda@gmail.com'`).then(results => {
+    pool.query(`SELECT email, password FROM users WHERE email='crislanemiranda2301@gmail.com'`).then(results => {
         if (results.rows.length < 1) {
             console.log('Usuário não encontrado')
-        }})
+        }else {
+            console.log('autenticado')
+        }}) 
 )
