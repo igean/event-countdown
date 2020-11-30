@@ -11,31 +11,32 @@ const pool = new Pool({
 pool.connect()
 
 const register = (req, res) => {
-    pool.query(`SELECT * WHERE email='${req.body.email}'`).then(
+    pool.query(`SELECT * FROM users WHERE email='${req.body.email}'`).then(
         results => {
             if (results.rows.length > 0) {
                 return res.send('Este email já está cadatrado')
-            } else {
-                bcrypt.hash(req.body.pass, 10, (err, hash) => {
-
-                    if (err) {
-                        return res.status(400).send('Erro no cadastro')
-                    }
-                        
-                    req.body.pass = hash
-                                    
-                    pool.query(`
-                        INSERT INTO users (name, email, password)   VALUES (
-                            '${req.body.name}',
-                            '${req.body.email}',
-                            '${req.body.pass}'
-                        )
-                    `)
-                        
-                    return res.render('registrado')
-                })
             }
+        
         })
+
+        bcrypt.hash(req.body.pass, 10, (err, hash) => {
+
+        if (err) {
+            return res.status(400).send('Erro no cadastro')
+        }
+            
+        req.body.pass = hash
+                        
+        pool.query(`
+            INSERT INTO users (name, email, password)   VALUES (
+                '${req.body.name}',
+                '${req.body.email}',
+                '${req.body.pass}'
+            )
+        `)
+            
+        return res.render('registrado')
+    })
 }
 
 const login = (req, res) => {
