@@ -35,15 +35,18 @@ const login = (req, res) => {
     const email = req.body.email
     const pass = req.body.pass
 
-    pool.query(`
-        SELECT email, password FROM users WHERE email='${email}';
-    `).then(result => {
-        if (!bcrypt.compare(pass, result.rows.password)) {
-            return res.send('Senha incorreta')
-        } else {
-            res.send('Autenticado')
-        }
-    })
+    pool.query(`SELECT email, password FROM users WHERE email='${email}'`).then(results => {
+        if (results.rows.length < 1) {
+            return res.send('Usuário não encontrado')
+        }else {
+            bcrypt.compare(pass,results.rows[0].password).then(r => {
+                if (r == true) {
+                    return res.send('autenticado')
+                } else {
+                    return res.send('senha incorreta')
+                }
+            })
+        }})
 }
 
 module.exports = {register, login}
