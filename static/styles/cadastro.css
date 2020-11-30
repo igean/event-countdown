@@ -3,6 +3,7 @@
 * {
     font-family: 'Reem Kufi', sans-serif;
     box-sizing: border-box;
+    text-decoration: none;
 }
 
 html, body {
@@ -102,6 +103,9 @@ main a:hover {
     cursor: pointer;
 }
 
+#pass_auth {
+    color: red;
+}
 
 /* MEDIA QUERIES */
 @media (min-width: 1024px) {

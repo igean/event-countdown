@@ -21,27 +21,28 @@
             <h2>Cadastro</h2>
 
             <div class="input">
-                <label>Nome</label>
-                <input type="text" name="name" class="name" id="name">
+                <label for="name">Nome</label>
+                <input type="text" name="name" class="name" id="name" required>
             </div>
             <div class="input">
-                <label>Email</label>
-                <input type="text" name="email" class="email" id="email">
+                <label for="email">Email</label>
+                <input type="text" name="email" class="email" id="email" required>
             </div>
             <div class="input">
-                <label>Senha</label>
-                <input type="password" name="pass" class="pass" id="pass">
+                <label for="pass">Senha</label>
+                <input type="password" name="pass" class="pass" id="pass" required>
             </div>
             <div class="input">
-                <label>Repita a senha</label>
-                <input type="password" name="r_pass" class="r_pass" id="r_pass">
+                <label for="r_pass">Repita a senha</label>
+                <input type="password" name="r_pass" class="r_pass" id="r_pass" required>
             </div>
+            <span id="pass_auth"></span>
 
             <button><a>Cadastrar</a></button>
         </form>
 
         <p>Já tem um conta?</p>
-        <a>Entre</a>
+        <a href="login">Entre</a>
         </main>
     </div>
 
