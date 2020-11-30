@@ -13,6 +13,7 @@ pool.connect().then(
         if (results.rows.length < 1) {
             console.log('Usuário não encontrado')
         }else {
-            console.log(await bcrypt.compare('23012020',results.rows[0].password))
+            const b = await bcrypt.compare('23012020',results.rows[0].password)
+            console.log(b)
         }}) 
 )
