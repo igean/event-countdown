@@ -5,7 +5,7 @@ const urlParser = bodyParser.urlencoded({extended: false})
 
 const app = express()
 
-const register = require('./server/users')
+const controllers = require('./server/users')
 
 app
 .set('view engine', 'hbs')
@@ -21,6 +21,12 @@ app
     return res.render('cadastro')
 })
 
-.post('/cadastro', urlParser, register)
+.get('/login', (req, res) => {
+    return res.render('login')
+})
 
-app.listen(process.env.PORT)
+.post('/cadastro', urlParser, controllers.register)
+
+.post('/login', urlParser, controllers.login)
+
+app.listen(8080)
