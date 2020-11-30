@@ -38,7 +38,7 @@ const login = (req, res) => {
     pool.query(`
         SELECT email, password FROM users WHERE email='${email}';
     `).then(result => {
-        if (!bcrypt.compare(pass, result.password)) {
+        if (!bcrypt.compare(pass, result.rows.password)) {
             return res.send('Senha incorreta')
         } else {
             res.send('Autenticado')
