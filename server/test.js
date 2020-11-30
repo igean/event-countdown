@@ -13,6 +13,6 @@ pool.connect().then(
         if (results.rows.length < 1) {
             console.log('Usuário não encontrado')
         }else {
-            console.log(results.rows[0])
+            console.log(results.rows[0].password)
         }}) 
 )
