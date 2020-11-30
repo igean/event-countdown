@@ -10,7 +10,6 @@ const pool = new Pool({
 
 pool.connect().then(
     bcrypt.hash('23012020', 10, (err, hash) => {
-        pool => {
             pool.query(`
                 UPDATE users
                 SET password = '${hash}'
@@ -20,6 +19,5 @@ pool.connect().then(
                     SELECT * FROM users;
                 `).then(pool => {console.log(pool.rows)})
             )
-        }
-    })
+        })
 )
