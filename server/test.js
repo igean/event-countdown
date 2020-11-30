@@ -13,8 +13,12 @@ pool.connect().then(
         if (results.rows.length < 1) {
             console.log('Usuário não encontrado')
         }else {
-            bcrypt.compare('23012020',results.rows[0].password).then(r => {
-                console.log(r)
+            bcrypt.compare('230120200',results.rows[0].password).then(r => {
+                if (r == true) {
+                    console.log('autenticado')
+                } else {
+                    console.log('senha incorreta')
+                }
             })
         }}) 
 )
