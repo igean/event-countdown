@@ -59,7 +59,7 @@ const login = (req, res) => {
                         expiresIn: 84600,
                     })
 
-                    return res.send('autenticado', {token})
+                    return res.render('teste', {token})
                 } else {
                     return res.send('senha incorreta')
                 }
