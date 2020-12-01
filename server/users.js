@@ -1,6 +1,9 @@
 const {Pool} = require('pg')
 const bcrypt = require('bcrypt')
 
+const jwt = require('jsonwebtoken')
+const private = require('./private/token.json')
+
 const pool = new Pool({
     connectionString: process.env.DATABASE_URL,
     ssl: {
@@ -36,7 +39,9 @@ const register = (req, res) => {
                 '${req.body.pass}'
             )
         `)
-        return res.render('registrado')
+
+        const a = 'oi'
+        return res.render('index')
     })
 }
 
@@ -44,13 +49,17 @@ const login = (req, res) => {
     const email = req.body.email
     const pass = req.body.pass
 
-    pool.query(`SELECT email, password FROM users WHERE email='${email}'`).then(results => {
+    pool.query(`SELECT * FROM users WHERE email='${email}'`).then(results => {
         if (results.rows.length < 1) {
             return res.send('Usuário não encontrado')
         }else {
             bcrypt.compare(pass,results.rows[0].password).then(r => {
                 if (r == true) {
-                    return res.send('autenticado')
+                    const token = jwt.sign({id: results.id}, private.secret, {
+                        expiresIn: 84600,
+                    })
+
+                    return res.send('autenticado', {token})
                 } else {
                     return res.send('senha incorreta')
                 }
