@@ -26,7 +26,8 @@ form {
 
     width: 70%;
     height: 50%;
-    background: #383636;
+    background: #433E99;
+    color: #F0F0F0;
 
     overflow: auto;
     position: fixed;
@@ -76,25 +77,26 @@ input {
     transform: translateY(-215%);
 }
 
-#datetime {
-    width: 80%;
-    display: grid;
-    grid-template-columns: 48% 48%;
-    grid-gap: 2%;
-}
-
-#datetime .input {
-    width: 100%;
-}
-
 form .input input, textarea {
     border: none;
     outline: none;
     grid-column: 2/3;
     grid-row: 1/2;
     background: none;
+    color: #FFF;
 
     font-size: large;
+}
+
+textarea {
+    padding-top: 1rem;
+}
+
+#datetime {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 textarea {
@@ -140,6 +142,19 @@ main a:hover {
 
 /* MEDIA QUERIES */
 @media (min-width: 1024px) {
+    *::-webkit-scrollbar {
+        width: 2px;
+        background: #fff;
+    }
+    
+    *::-webkit-scrollbar-track {
+        background: #F0F0F0;
+    }
+    
+    *::-webkit-scrollbar-thumb {
+        background: red;
+    }
+
     .container {
         display: grid;
         grid-template-columns: repeat(5,25%);
@@ -153,5 +168,22 @@ main a:hover {
 
     .container main {
         grid-column: 2/4;
+    }
+
+    form {
+        height: 80%;
+        width: 50%;
+        top: 10%;
+    }
+
+    #datetime {
+        width: 80%;
+        display: grid;
+        grid-template-columns: 48% 48%;
+        grid-gap: 2%;
+    }
+    
+    #datetime .input {
+        width: 100%;
     }
 }
