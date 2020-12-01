@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Reem+Kufi&display=swap');
+
+* {
+    font-family: 'Reem Kufi', sans-serif;
+    box-sizing: border-box;
+    text-decoration: none;
+    color: #F0F0F0;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+}
+
+.container {
+    min-height: 100%;
+    padding: 1rem .8rem 3rem;
+}
+
+form {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 90%;
+    height: 80%;
+
+    overflow: auto;
+    position: fixed;
+}
+
+form h2 {
+    font-size: 3rem;
+}
+
+form .input {
+    position: relative;
+    width: 80%;
+    border-radius: 1rem;
+    background: rgba(204, 204, 204, .3);
+
+    display: grid;
+    grid-template-columns: 5% 90% 5%;
+    grid-template-rows: 100%;
+
+    align-items: center;
+
+    margin-bottom: 1rem;
+}
+
+form .input label {
+    position: absolute;
+    left: 1rem;
+    transition: .2s ease-in-out;
+
+    font-size: 1.4rem;
+    font-weight: 400;
+
+    transform: translateY(-75%);
+}
+
+input {
+    height: 3rem;
+}
+
+.input.textarea label {
+    transform: translateY(-215%);
+}
+
+#datetime {
+    width: 80%;
+    display: grid;
+    grid-template-columns: 48% 48%;
+    grid-gap: 2%;
+}
+
+#datetime .input {
+    width: 100%;
+}
+
+form .input input, textarea {
+    border: none;
+    outline: none;
+    grid-column: 2/3;
+    grid-row: 1/2;
+    background: none;
+
+    font-size: large;
+}
+
+textarea {
+    resize: none;
+}
+
+form button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 70%;
+    background: none;
+    border: none;
+}
+
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+main a {
+    background: #6159E5;
+    color: #FFFFFF;
+    font-size: 1.5rem;
+    border: none;
+    width: 70%;
+    padding: .4rem 25% .3rem;
+    border-radius: .2rem;
+
+    transition: .3s;
+}
+
+main form a {
+    width: 100%;
+}
+
+main a:hover {
+    background: #433E99;
+    cursor: pointer;
+}
+
+/* MEDIA QUERIES */
+@media (min-width: 1024px) {
+    .container {
+        display: grid;
+        grid-template-columns: repeat(5,25%);
+        grid-template-rows: 10% 70% 10%;
+        padding: 0 5%;
+    }
+
+    .container header {
+        grid-column: 1/5;
+    }
+
+    .container main {
+        grid-column: 2/4;
+    }
+}

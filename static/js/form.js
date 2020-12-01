@@ -8,10 +8,8 @@ form.addEventListener('submit', (e) => {
     const pass2 = inputs[3].children[1].value
     
     if (pass2 !== pass1) {
-    
         document.querySelector('#pass_auth').innerText = 'As senhas não coincidem'
         e.preventDefault()
-    
     }
 })
 

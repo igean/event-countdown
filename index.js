@@ -25,6 +25,10 @@ app
     return res.render('login')
 })
 
+.get('/teste', (req, res) => {
+    res.render('teste')
+})
+
 .post('/cadastro', urlParser, controllers.register)
 
 .post('/login', urlParser, controllers.login)

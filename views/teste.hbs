@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-r">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste - Events Countdown</title>
+
+    <link rel="stylesheet" href="styles/header.css">
+    <link rel="stylesheet" href="styles/dark.css">
+    <link rel="stylesheet" href="styles/teste.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Events Countdown</h1>
+            <a id="dark-switch"><img src="images/moon.svg"></a>
+        </header>
+
+        <main>
+            <form method="GET">
+            <h2>Adionar Evento</h2>
+
+            <div class="input">
+                <label for="title">Título</label>
+                <input type="text" name="title" class="title" id="title" required>
+            </div>
+
+            <div id="datetime">
+                <div class="input">
+                <label for="date">Data</label>
+                <input type="date" name="date" class="date" id="date" required>
+                </div>
+                <div class="input">
+                <label for="time">Hora</label>
+                <input type="time" name="time" class="time" id="time" required>
+            </div>
+            </div>
+
+            <div class="input textarea">
+                <label for="description">Descrição</label>
+                <textarea rows="5" type="description" name="description" class="description" id="description"></textarea>
+            </div>
+            <button><a>Adicionar</a></button>
+        </form>
+
+        <a onclick="document.querySelector('form').style.display = 'flex'"></a>
+        </main>
+    </div>
+    <script src="js/night-mode.js"></script>
+</body>
+</html>
