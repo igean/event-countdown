@@ -55,7 +55,7 @@ const login = (req, res) => {
         }else {
             bcrypt.compare(pass,results.rows[0].password).then(r => {
                 if (r == true) {
-                    const token = jwt.sign({id: results.id}, private.secret, {
+                    const token = jwt.sign({id: results.rows[0].id}, private.secret, {
                         expiresIn: 84600,
                     })
 
