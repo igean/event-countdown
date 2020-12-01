@@ -119,20 +119,16 @@ main {
     justify-content: center;
 }
 
-main a {
+a {
     background: #6159E5;
     color: #FFFFFF;
     font-size: 1.5rem;
     border: none;
     width: 70%;
-    padding: .4rem 25% .3rem;
+    padding: .4rem .5rem .3rem;
     border-radius: .2rem;
 
     transition: .3s;
-}
-
-main form a {
-    width: 100%;
 }
 
 main a:hover {
