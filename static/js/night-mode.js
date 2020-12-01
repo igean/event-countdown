@@ -13,7 +13,6 @@ nswitch.addEventListener('click', () => {
 function darkmode() {
     [
         document.querySelector('.container'),
-        document.querySelector('h1'),
         document.querySelector('h2')
     ]
 

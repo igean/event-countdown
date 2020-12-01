@@ -4,7 +4,6 @@
     font-family: 'Reem Kufi', sans-serif;
     box-sizing: border-box;
     text-decoration: none;
-    color: #F0F0F0;
 }
 
 html, body {
@@ -20,14 +19,23 @@ html, body {
 
 form {
     display: none;
+
     flex-direction: column;
     align-items: center;
     text-align: center;
-    width: 90%;
-    height: 80%;
+
+    width: 70%;
+    height: 50%;
+    background: #383636;
 
     overflow: auto;
     position: fixed;
+
+    top: 20%;
+    padding-bottom: 2rem;
+
+    border-radius: 1rem;
+    box-shadow: 0 1rem 2rem 0 rgba(46, 44, 44, .4);
 }
 
 form h2 {
