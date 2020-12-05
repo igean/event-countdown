@@ -17,7 +17,7 @@
         </header>
 
         <main>
-            <form method="GET">
+            <form>
             <h2>Adionar Evento</h2>
 
             <div class="input">
@@ -40,15 +40,14 @@
                 <label for="description">Descrição</label>
                 <textarea rows="5" type="description" name="description" class="description" id="description"></textarea>
             </div>
-            <button><a>Adicionar</a></button>
+            <button type="button" id="add" onclick="start_countdown()"><a>Adicionar</a></button>
         </form>
 
         <a onclick="document.querySelector('form').style.display = 'flex'">Adicionar evento</a>
 
         </main>
-
-        <input type="hidden" value="{{token}}">
     </div>
     <script src="js/night-mode.js"></script>
+    <script src="js/teste.js"></script>
 </body>
 </html>

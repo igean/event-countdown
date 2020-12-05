@@ -82,13 +82,13 @@ a {
         grid-template-columns: 50% 50%;
         grid-template-rows: 10% 70% 10%;
         background: #F0F0F0 10% 50%/clamp(30rem,100%,35rem) url('../images/back.svg') no-repeat;
-        padding: 0 5%;
+        padding: 0 2%;
     }
 
     .container main {
         grid-column: 2/3;
         grid-row: 2/3;
-        margin-top: 1rem;
+        margin-top: .5rem;
     }
 
     .container main h2 {
@@ -97,7 +97,7 @@ a {
     }
 
     .container main .login {
-        margin: 4rem 0;
+        margin: 3rem 0;
     }
 
     .container main .login a {
