@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-r">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,6 +10,7 @@
     <link rel="stylesheet" href="styles/dark.css">
     <link rel="stylesheet" href="styles/cadastro.css">
 </head>
+
 <body>
     <div class="container">
         <header>
@@ -18,35 +20,36 @@
 
         <main>
             <form method="POST">
-            <h2>Cadastro</h2>
+                <h2>Cadastro</h2>
 
-            <div class="input">
-                <label for="name">Nome</label>
-                <input autocomplete="off" type="text" name="name" class="name" id="name" required>
-            </div>
-            <div class="input">
-                <label for="email">Email</label>
-                <input autocomplete="off" type="email" name="email" class="email" id="email" required>
-            </div>
-            <div class="input">
-                <label for="pass">Senha</label>
-                <input autocomplete="off" type="password" name="pass" class="pass" id="pass" required>
-            </div>
-            <div class="input">
-                <label for="r_pass">Repita a senha</label>
-                <input autocomplete="off" type="password" name="r_pass" class="r_pass" id="r_pass" required>
-            </div>
-            <span id="pass_auth"></span>
+                <div class="input">
+                    <label for="name">Nome</label>
+                    <input autocomplete="off" type="text" name="name" class="name" id="name" required>
+                </div>
+                <div class="input">
+                    <label for="email">Email</label>
+                    <input autocomplete="off" type="email" name="email" class="email" id="email" required>
+                </div>
+                <div class="input">
+                    <label for="pass">Senha</label>
+                    <input autocomplete="off" type="password" name="pass" class="pass" id="pass" required>
+                </div>
+                <div class="input">
+                    <label for="r_pass">Repita a senha</label>
+                    <input autocomplete="off" type="password" name="r_pass" class="r_pass" id="r_pass" required>
+                </div>
+                <span id="pass_auth"></span>
 
-            <button><a>Cadastrar</a></button>
-        </form>
+                <button><a>Cadastrar</a></button>
+            </form>
 
-        <p>Já tem um conta?</p>
-        <a href="login">Entre</a>
+            <p>Já tem um conta?</p>
+            <a href="login">Entre</a>
         </main>
     </div>
 
     <script src="js/form.js"></script>
     <script src="js/night-mode.js"></script>
 </body>
+
 </html>

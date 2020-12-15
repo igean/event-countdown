@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-r">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,6 +10,7 @@
     <link rel="stylesheet" href="styles/dark.css">
     <link rel="stylesheet" href="styles/teste.css">
 </head>
+
 <body>
     <div class="container">
         <header>
@@ -18,36 +20,38 @@
 
         <main>
             <form>
-            <h2>Adionar Evento</h2>
+                <h2>Adionar Evento</h2>
 
-            <div class="input">
-                <label for="title">Título</label>
-                <input autocomplete="off" type="text" name="title" class="title" id="title" required>
-            </div>
-
-            <div id="datetime">
                 <div class="input">
-                <label for="date">Data</label>
-                <input autocomplete="off" type="date" name="date" class="date" id="date" required>
+                    <label for="title">Título</label>
+                    <input autocomplete="off" type="text" name="title" class="title" id="title" required>
                 </div>
-                <div class="input">
-                <label for="time">Hora</label>
-                <input autocomplete="off" type="time" name="time" class="time" id="time" required>
-            </div>
-            </div>
 
-            <div class="input textarea">
-                <label for="description">Descrição</label>
-                <textarea rows="5" type="description" name="description" class="description" id="description"></textarea>
-            </div>
-            <button type="button" id="add" onclick="start_countdown()"><a>Adicionar</a></button>
-        </form>
+                <div id="datetime">
+                    <div class="input">
+                        <label for="date">Data</label>
+                        <input autocomplete="off" type="date" name="date" class="date" id="date" required>
+                    </div>
+                    <div class="input">
+                        <label for="time">Hora</label>
+                        <input autocomplete="off" type="time" name="time" class="time" id="time" required>
+                    </div>
+                </div>
 
-        <a onclick="document.querySelector('form').style.display = 'flex'">Adicionar evento</a>
+                <div class="input textarea">
+                    <label for="description">Descrição</label>
+                    <textarea rows="5" type="description" name="description" class="description"
+                        id="description"></textarea>
+                </div>
+                <button type="button" id="add" onclick="start_countdown()"><a>Adicionar</a></button>
+            </form>
+
+            <a onclick="document.querySelector('form').style.display = 'flex'">Adicionar evento</a>
 
         </main>
     </div>
     <script src="js/night-mode.js"></script>
     <script src="js/teste.js"></script>
 </body>
+
 </html>

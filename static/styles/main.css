@@ -1,121 +1,123 @@
-@import url('https://fonts.googleapis.com/css2?family=Reem+Kufi&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Reem+Kufi&display=swap");
 
 * {
-    font-family: 'Reem Kufi', sans-serif;
+  font-family: "Reem Kufi", sans-serif;
 }
 
-html, body {
-    height: 100vh;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+html,
+body {
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 .container {
-    min-height: 100%;
-    background: #F0F0F0 50% 10%/clamp(27rem,100%,35rem) url('../images/back.svg') no-repeat;
-    padding: 1rem .8rem 3rem;
+  min-height: 100%;
+  background: #f0f0f0 50% 10% / clamp(27rem, 100%, 35rem)
+    url("../images/back.svg") no-repeat;
+  padding: 1rem 0.8rem 3rem;
 }
 
 .container main {
-    margin-top: 20rem;
-    text-align: center;
+  margin-top: 20rem;
+  text-align: center;
 }
 
 .container main h2 {
-    color: #5047EA;
-    font-size: 2.5rem;
+  color: #5047ea;
+  font-size: 2.5rem;
 }
 
-.container main p, .container footer p {
-    color: #525252;
-    font-size: 1.2rem;
-    line-height: 1;
+.container main p,
+.container footer p {
+  color: #525252;
+  font-size: 1.2rem;
+  line-height: 1;
 }
 
 .login {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .login a {
-    background: #6159E5;
-    color: #FFFFFF;
-    font-size: 1.5rem;
-    border: none;
-    width: 70%;
-    padding: .4rem 0 .2rem;
-    margin: .2rem 0;
-    border-radius: .2rem;
+  background: #6159e5;
+  color: #ffffff;
+  font-size: 1.5rem;
+  border: none;
+  width: 70%;
+  padding: 0.4rem 0 0.2rem;
+  margin: 0.2rem 0;
+  border-radius: 0.2rem;
 
-    transition: .3s;
+  transition: 0.3s;
 }
 
 .login a:hover {
-    background: #433E99;
-    cursor: pointer;
+  background: #433e99;
+  cursor: pointer;
 }
 
 .login span {
-    font-size: 1.2rem;
+  font-size: 1.2rem;
 }
 
 .container footer {
-    text-align: center;
+  text-align: center;
 }
 
 .container footer p a {
-    color: #6159E5;
+  color: #6159e5;
 }
 
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
-
 /* MEDIA QUERIES */
-@media (min-width:1024px) {
+@media (min-width: 1024px) {
+  .container {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 10% 70% 10%;
+    background: #f0f0f0 10% 50% / clamp(30rem, 100%, 35rem)
+      url("../images/back.svg") no-repeat;
+    padding: 0 2%;
+  }
 
-    .container {
-        display: grid;
-        grid-template-columns: 50% 50%;
-        grid-template-rows: 10% 70% 10%;
-        background: #F0F0F0 10% 50%/clamp(30rem,100%,35rem) url('../images/back.svg') no-repeat;
-        padding: 0 2%;
-    }
+  .container main {
+    grid-column: 2/3;
+    grid-row: 2/3;
+    margin-top: 0.5rem;
+  }
 
-    .container main {
-        grid-column: 2/3;
-        grid-row: 2/3;
-        margin-top: .5rem;
-    }
+  .container main h2 {
+    font-size: 3.2rem;
+    line-height: 1;
+  }
 
-    .container main h2 {
-        font-size: 3.2rem;
-        line-height: 1;
-    }
+  .container main .login {
+    margin: 3rem 0;
+  }
 
-    .container main .login {
-        margin: 3rem 0;
-    }
+  .container main .login a {
+    width: 80%;
+    margin: 1rem 0;
+  }
 
-    .container main .login a {
-        width: 80%;
-        margin: 1rem 0;
-    }
+  .container main .login span {
+    font-size: 1.8rem;
+  }
 
-    .container main .login span {
-        font-size: 1.8rem;
-    }
+  .container main p,
+  .container footer p {
+    font-size: 1.8rem;
+    line-height: 0;
+  }
 
-    .container main p, .container footer p {
-        font-size: 1.8rem;
-        line-height: 0;
-    }
-
-    .container footer {
-        grid-column: 2/3;
-    }
-
+  .container footer {
+    grid-column: 2/3;
+  }
 }
