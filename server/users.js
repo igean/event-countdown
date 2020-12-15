@@ -44,7 +44,7 @@ const register = (req, res) => {
             )
         `);
 
-    return res.render("login");
+    return res.redirect("/login");
   });
 };
 
